@@ -4,13 +4,23 @@
  <title>Out of code</title>
  <link href="/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-08-12T08:58:58+09:00</updated>
+ <updated>2023-08-12T09:14:18+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Mark Otto</name>
    <email>markdotto@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>jekyll과 ruby를 이용하여 github 블로그 이용하기</title>
+   <link href="http://localhost:4000/2023/08/12/how-setting-jekyll+ruby/"/>
+   <updated>2023-08-12T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2023/08/12/how-setting-jekyll+ruby</id>
+   <content type="html">&lt;p&gt;이 곳에 내용을 채워넣도록 할게요.
+너무 길게 되어 있는 부분들과 제가 경험했던 문제들을 적어보려고 합니다.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Hello, github blog</title>
