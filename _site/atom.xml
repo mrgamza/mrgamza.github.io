@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Out of code</title>
+ <link href="/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2023-08-12T08:58:58+09:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Mark Otto</name>
+   <email>markdotto@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Hello, github blog</title>
+   <link href="http://localhost:4000/2023/08/12/hello-github-blog/"/>
+   <updated>2023-08-12T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2023/08/12/hello-github-blog</id>
+   <content type="html">&lt;p&gt;다양한 내용으로 알차게 꾸며 나가겠습니다.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
