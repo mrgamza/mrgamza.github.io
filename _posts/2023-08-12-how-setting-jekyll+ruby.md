@@ -62,4 +62,24 @@ $ rbenv global 2.7.7
 $ gem install jekyll bundler github-pages
 ```
 
-### Continue...
+### 맘에드는 테마를 선택합니다.
+다운로드 하여 줍니다. 다운로드 받고 나서 압축을 풀어보면 Gemfile이 존재하는데요. 이것을 통해서 서버 구동을 하면서 테스트가 가능하게 됩니다.
+- URL : http://jekyllthemes.org/
+
+### 블로그 폴더 만들기
+프로젝트 생성하듯이 폴더의 이름을 다음과 같이 넣어줘서 만들어줍니다.
+```
+$ jekyll new [블로그 이름]
+```
+
+### 블로그 내용 적고 테스트
+```
+$ bundle exec jekyll serve
+```
+
+### 구동 확인
+브라우저를 열어주십시오
+```
+localhost:4000
+```
+
