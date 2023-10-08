@@ -1,53 +1,17 @@
 ---
 layout: post
-title: SwiftUI - Text
+title: 가장 짧은 테트리스
 ---
 
-아이고 오늘 하루도 이렇게 다 지나갔네요  
-건강을 지키려고 운동갔다가 집에와서 집정리하고 하루 끝.  
-내기전에 SwiftUI에 대해서 정리하는 시간을 가져보려고 합니다. 
-
-## 예제
 ```
-Text('Hi')
-```
-이것 하나로 그냥 UILabel에 넣던 부분이 충족이 됩니다.
-
-SwiftUI는 Swift의 버전에 따라서 많은 영향이 가지만 다음과 같은 것들을 몇가지 적어볼게요
-
-### Line 제한
-```
-Text("후루루후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류")
-  .lineLimit(3)
+<body onKeyDown=K=event.keyCode><script>X=[Z=[B=A=12]];h=e=K=t=P=0;function Y() 
+{C=[d=K-38];c=0;for(i=4;i--*K;K-13?c+=!Z[h+p+d]:c-=!Z[h+(C[i]=p*A-Math.round(p/ 
+A)*145)])p=B[i];!t|c+4?c-4?0:h+=d:B=C;for(f=K=i=0;i<4;f+=Z[A+p])X[p=h+B[i++]]=1 
+if(e=!e){if(f|B){for(l=228;i--;)Z[h+B[i]]=k=1;for(B=[[-7,-20,6,17,-9,3,6][t=++t 
+%7]-4,0,1,t-6?-A:-1];l--;h=5)if(l%A)l-=l%A*!Z[l];else for(P+=k++,j=l+=A;--j>A;) 
+Z[j]=Z[j-A]}h+=A}for(i=S="";i<240;X[i]=Z[i]|=++i%A<2|i>228)i%A?0:S+="<br>",S+=X 
+[i]?"■":"□";document.body.innerHTML=S+P;Z[5]||setTimeout(Y,99-P)}Y()</script> 
 ```
 
-### 줄 생략하는 기능
-```
-Text("후루루후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류")
-  .lineLimit(1)
-  .truncationMode(.middle)
-```
-
-### 폰트의 변경
-```
-Text("후루루후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류")
-  .font(.largeTitle)
-```
-
-### 색상의 변경
-```
-Text("후루루후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류")
-  .foregroundColor(Color.red)
-```
-
-### 백그라운드, 이건 View의 특성
-```
-Text("후루루후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류")
-    .background(Color.yellow)
-```
-
-어마어마하게 많은 부분들을 사용할 수 있습니다.  
-offset이나 padding 같은 부분들도 물론 View의 속성이라 사용이 가능합니다.  
-재미있는 부분은 이 순서들을 변경하게 되면 약간 우리가 원하는 모양이 아닌것으로 나올 수도 있다는 것입니다.
-
-오늘은 이만...
+이걸로 테트리스가 됩니다.
+신기 할 뿐.
