@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 title: 하루종일 기술 찾았는데 안될거 같다
 ---

@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 title: 이사를 하고 나서
 ---

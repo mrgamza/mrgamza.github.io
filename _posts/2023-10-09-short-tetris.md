@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 title: 가장 짧은 테트리스
 ---

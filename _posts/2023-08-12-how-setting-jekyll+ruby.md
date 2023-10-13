@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 title: jekyll과 ruby를 이용하여 github 블로그 이용하기
 ---
