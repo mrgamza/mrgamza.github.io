@@ -50,15 +50,52 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2023/08/12/how-setting-jekyll+ruby/">
-        jekyll과 ruby를 이용하여 github 블로그 이용하기
+      <a href="/2023/10/14/swiftui-image/">
+        SwiftUI - Image
       </a>
     </h1>
 
-    <time datetime="2023-08-12T00:00:00+09:00" class="post-date">12 Aug 2023</time>
+    <time datetime="2023-10-14T00:00:00+09:00" class="post-date">14 Oct 2023</time>
 
-    <p>이 곳에 내용을 채워넣도록 할게요.
-너무 길게 되어 있는 부분들과 제가 경험했던 문제들을 적어보려고 합니다.</p>
+    <p>어제는 SwiftUI의 Image에 대해서 봅시다.
+공식 페이지는 다음과 같습니다
+<a href="https://developer.apple.com/documentation/swiftui/image">Image</a></p>
+
+<p>iOS 기준의 최소버전은 13.0입니다</p>
+
+<p>공식적으로 PNG, JPEG, HEIC 등을 지원한다고 합니다. SVG등등…</p>
+
+<p>다음과 같은 예제로 출력이 가능하다고 합니다</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Image("Landscape_4")
+    .resizable()
+    .aspectRatio(contentMode: .fit)
+Text("Water wheel")
+</code></pre></div></div>
+
+<p>그리고 표준 modifires를 가지고 이미지의 fitting을 할 수 있게 해준다고 합니다</p>
+
+<p>modifier는</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resizable(capInsets:resizingMode:)
+</code></pre></div></div>
+
+<h3 id="생성자">생성자</h3>
+<p>Creates a labeled image that you can use as content for controls.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>init(String, bundle: Bundle?)
+</code></pre></div></div>
+<p>Creates a labeled image that you can use as content for controls, with a variable value.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>init(String, variableValue: Double?, bundle: Bundle?)
+</code></pre></div></div>
+<p>Initialize an Image with an image resource.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>init(ImageResource)
+</code></pre></div></div>
+
+<h3 id="modifier">modifier</h3>
+<p>Sets the mode by which SwiftUI resizes an image to fit its space.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>func resizable(capInsets: EdgeInsets, resizingMode: Image.ResizingMode) -&gt; Image
+</code></pre></div></div>
+
+<p>modifier는 점점 추가하겠습니다</p>
 
   </article>
   
@@ -78,7 +115,7 @@
       <footer class="footer">
         <small>
           &copy;
-          <time datetime="2023-08-12T09:14:18+09:00"
+          <time datetime="2023-10-14T08:25:15+09:00"
             >2023</time
           >. All rights reserved.
         </small>

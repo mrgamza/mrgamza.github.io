@@ -1,53 +1,50 @@
 ---
 layout: post
-title: SwiftUI - Text
+title: SwiftUI - Image
 ---
 
-아이고 오늘 하루도 이렇게 다 지나갔네요  
-건강을 지키려고 운동갔다가 집에와서 집정리하고 하루 끝.  
-내기전에 SwiftUI에 대해서 정리하는 시간을 가져보려고 합니다. 
+어제는 SwiftUI의 Image에 대해서 봅시다.
+공식 페이지는 다음과 같습니다
+[Image](https://developer.apple.com/documentation/swiftui/image)
 
-## 예제
-```
-Text('Hi')
-```
-이것 하나로 그냥 UILabel에 넣던 부분이 충족이 됩니다.
+iOS 기준의 최소버전은 13.0입니다
 
-SwiftUI는 Swift의 버전에 따라서 많은 영향이 가지만 다음과 같은 것들을 몇가지 적어볼게요
+공식적으로 PNG, JPEG, HEIC 등을 지원한다고 합니다. SVG등등...
 
-### Line 제한
-```
-Text("후루루후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류")
-  .lineLimit(3)
-```
+다음과 같은 예제로 출력이 가능하다고 합니다
 
-### 줄 생략하는 기능
 ```
-Text("후루루후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류")
-  .lineLimit(1)
-  .truncationMode(.middle)
+Image("Landscape_4")
+    .resizable()
+    .aspectRatio(contentMode: .fit)
+Text("Water wheel")
 ```
 
-### 폰트의 변경
+그리고 표준 modifires를 가지고 이미지의 fitting을 할 수 있게 해준다고 합니다
+
+modifier는
 ```
-Text("후루루후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류")
-  .font(.largeTitle)
+resizable(capInsets:resizingMode:)
 ```
 
-### 색상의 변경
+### 생성자
+Creates a labeled image that you can use as content for controls.
 ```
-Text("후루루후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류")
-  .foregroundColor(Color.red)
+init(String, bundle: Bundle?)
+```
+Creates a labeled image that you can use as content for controls, with a variable value.
+```
+init(String, variableValue: Double?, bundle: Bundle?)
+```
+Initialize an Image with an image resource.
+```
+init(ImageResource)
 ```
 
-### 백그라운드, 이건 View의 특성
+### modifier
+Sets the mode by which SwiftUI resizes an image to fit its space.
 ```
-Text("후루루후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류후루류")
-    .background(Color.yellow)
+func resizable(capInsets: EdgeInsets, resizingMode: Image.ResizingMode) -> Image
 ```
 
-어마어마하게 많은 부분들을 사용할 수 있습니다.  
-offset이나 padding 같은 부분들도 물론 View의 속성이라 사용이 가능합니다.  
-재미있는 부분은 이 순서들을 변경하게 되면 약간 우리가 원하는 모양이 아닌것으로 나올 수도 있다는 것입니다.
-
-오늘은 이만...
+modifier는 점점 추가하겠습니다

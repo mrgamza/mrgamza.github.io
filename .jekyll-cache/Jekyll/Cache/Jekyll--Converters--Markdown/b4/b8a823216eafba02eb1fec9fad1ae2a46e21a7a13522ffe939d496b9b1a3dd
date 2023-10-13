@@ -1,0 +1,20 @@
+I"�<p>오늘은 VSCode를 원격으로 돌리는 방법을 알아보려고 합니다.<br />
+물론 VSCode가 그렇게 무겁지 않기 때문에 웬만하면 노트북에 설치가 다 되어 있을거라…<br />
+이동하면서 코딩하기 어렵지는 않습니다.<br />
+그래도 이런 방법도 있다는걸 공유하고 싶어서 글을 남깁니다.</p>
+
+<p>일단 docker를 이용해서 원격지에 image를 pull 하여 주면 됩니다.</p>
+
+<p><a href="hub.docker.com/r/codercom/code-server">Code server</a></p>
+
+<p>이미지는 code-server를 이용할겁니다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo docker pull codercom/code-server
+</code></pre></div></div>
+
+<p>image를 다 받아오게 되면 다음과 같이 docker container를 실행하면 됩니다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo docker run --name code-server -p 8080:8080 -v {YOUR_VOLUME_PATH}:/home/coder/project -e PASSWORD={YOUR_PASSWORD} codercom/code-server:latest
+</code></pre></div></div>
+<p>docker를 조금 아시는 분들은 -p의 port 부분과 -v 부분의 연결해줄 volume를 조정해서 하시면 됩니다.<br />
+접속 테스트는 localhost:8080으로 하면 됩니다.<br />
+만약 자신의 개인 컴퓨터를 해놓으신거면 공유기 설정에서 포트 포워딩해서 사용하시기 바랍니다.</p>
+:ET

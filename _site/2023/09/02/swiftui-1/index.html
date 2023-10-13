@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark-poole">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      SwiftUI란? 특징1편 &middot; Out of code
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Out of code" href="/atom.xml">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="SwiftUI란? 특징1편" />
+<meta name="author" content="Mark Otto" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="애플에서 2019년 WWDC 2019에서 발표한 프레임워크입니다. 기존의 UIKit보다 쉽게 만들고 개발하기 위해서 만들어졌다고 하는데요. 사실 처음에 나왔을때에는 UIKit의 여러가지 방향을 제공하여 주지 않아서 UIRepresentable을 이용해서 개발하는 문제가 있었어요. 최근에 iOS16부터는 정말 좀 쓸만한데요 아직은 쉽지 않은 상태라고 생각하고 있습니다. 글을 작성하는 이 시점에도 아마존 앱만해도 iOS14가 최소 버전입니다. ㅎㅎ" />
+<meta property="og:description" content="애플에서 2019년 WWDC 2019에서 발표한 프레임워크입니다. 기존의 UIKit보다 쉽게 만들고 개발하기 위해서 만들어졌다고 하는데요. 사실 처음에 나왔을때에는 UIKit의 여러가지 방향을 제공하여 주지 않아서 UIRepresentable을 이용해서 개발하는 문제가 있었어요. 최근에 iOS16부터는 정말 좀 쓸만한데요 아직은 쉽지 않은 상태라고 생각하고 있습니다. 글을 작성하는 이 시점에도 아마존 앱만해도 iOS14가 최소 버전입니다. ㅎㅎ" />
+<link rel="canonical" href="http://localhost:4000/2023/09/02/swiftui-1/" />
+<meta property="og:url" content="http://localhost:4000/2023/09/02/swiftui-1/" />
+<meta property="og:site_name" content="Out of code" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-09-02T00:00:00+09:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Mark Otto"},"headline":"SwiftUI란? 특징1편","dateModified":"2023-09-02T00:00:00+09:00","datePublished":"2023-09-02T00:00:00+09:00","description":"애플에서 2019년 WWDC 2019에서 발표한 프레임워크입니다. 기존의 UIKit보다 쉽게 만들고 개발하기 위해서 만들어졌다고 하는데요. 사실 처음에 나왔을때에는 UIKit의 여러가지 방향을 제공하여 주지 않아서 UIRepresentable을 이용해서 개발하는 문제가 있었어요. 최근에 iOS16부터는 정말 좀 쓸만한데요 아직은 쉽지 않은 상태라고 생각하고 있습니다. 글을 작성하는 이 시점에도 아마존 앱만해도 iOS14가 최소 버전입니다. ㅎㅎ","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2023/09/02/swiftui-1/"},"url":"http://localhost:4000/2023/09/02/swiftui-1/","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+    <div class="container content">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">Out of code</a>
+
+          <nav class="nav">
+            
+            <small><a href="/archive">Blog</a></small>
+            
+          </nav>
+        </h3>
+      </header>
+
+      <main>
+        <article class="post">
+  <h1 class="post-title">SwiftUI란? 특징1편</h1>
+  <time datetime="2023-09-02T00:00:00+09:00" class="post-date">02 Sep 2023</time>
+  <p>애플에서 2019년 WWDC 2019에서 발표한 프레임워크입니다.<br />
+기존의 UIKit보다 쉽게 만들고 개발하기 위해서 만들어졌다고 하는데요.<br />
+사실 처음에 나왔을때에는 UIKit의 여러가지 방향을 제공하여 주지 않아서 UIRepresentable을 이용해서 개발하는 문제가 있었어요.
+최근에 iOS16부터는 정말 좀 쓸만한데요<br />
+아직은 쉽지 않은 상태라고 생각하고 있습니다.<br />
+글을 작성하는 이 시점에도 아마존 앱만해도 iOS14가 최소 버전입니다. ㅎㅎ</p>
+
+<h2 id="특징">특징</h2>
+<h3 id="적은-코드로-더-좋은-앱을-만든다">적은 코드로 더 좋은 앱을 만든다</h3>
+<p>사실 어떤 내용이냐면 사실은 SwiftUI 자체도 내부에서는 UIKit을 이용하여서 래핑을 하여주었어요.<br />
+UIViewController를 감싸고 있던가 하는 부분들을 프레임워크가 대신 지원해주는것이죠</p>
+
+<h3 id="선언형이다">선언형이다</h3>
+<p>어떤 의미냐면 기존의 UIKit의 코드를 예로 들어볼게요.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let button = UIButton()
+button.setTitle("Hi", for: .normal)
+button.setTitleColor(.red, for: .normal)
+rootView.addSubView(button)
+</code></pre></div></div>
+<p>그냥 타이핑한거라 잘 동작안해도 이해해 주세요. ㅠ<br />
+위의 내용은 UIView를 만들고  RootView에 넣어줘입니다.</p>
+
+<p>그럼 SwiftUI는 어떻느냐</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct ContentView: View {
+    var body: some View {
+        Button(action: {
+            print("click!!")
+        }) {
+            Text("Hi")
+                .font(.largeTitle)
+                .foregroundColor(.red)
+        }
+    }
+}
+</code></pre></div></div>
+
+<p>위에 넣은것과 거의 비슷한 모양이 나오게 됩니다.
+SwiftUI는 이걸 여기에 넣어줘 하는 형태로 만들어지게 되는겁니다.</p>
+
+<p>간단하게 선언형의 개발방법에 대해서 알아본것과 같습니다.</p>
+
+<p>중요한것은 사실 저 Button은 UIButton을 wrapping 한것과 같습니다.</p>
+
+<p>SwiftUI가 나오기전에 이것과 거의 흡사하게 만들었었는데요.
+컨셉 자체는 같습니다.
+잘보시면 .font다음에 바로 .foregroundColor를 호출할수 있는데요.<br />
+이유는 View를 다시 return 하여주기 때문입니다.</p>
+
+<p>참 쉽죠?</p>
+
+<p>각 View의 구성 struct에 대해서도 알아보도록 할게요.</p>
+
+</article>
+
+
+<aside class="related">
+  <h3>Related posts</h3>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2023/10/14/swiftui-image/">
+          SwiftUI - Image
+          <small><time datetime="2023-10-14T00:00:00+09:00">14 Oct 2023</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2023/10/09/short-tetris/">
+          가장 짧은 테트리스
+          <small><time datetime="2023-10-09T00:00:00+09:00">09 Oct 2023</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2023/09/03/swiftui-text/">
+          SwiftUI - Text
+          <small><time datetime="2023-09-03T00:00:00+09:00">03 Sep 2023</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+
+
+      </main>
+
+      <footer class="footer">
+        <small>
+          &copy;
+          <time datetime="2023-10-14T08:25:15+09:00"
+            >2023</time
+          >. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
