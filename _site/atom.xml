@@ -4,7 +4,7 @@
  <title>Out of code</title>
  <link href="/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-10-14T08:25:15+09:00</updated>
+ <updated>2023-10-14T08:36:14+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Mark Otto</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>SwiftUI - Image</title>
-   <link href="http://localhost:4000/2023/10/14/swiftui-image/"/>
+   <link href="http://localhost:4000/2023/10/14/swiftui_image/"/>
    <updated>2023-10-14T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2023/10/14/swiftui-image</id>
+   <id>http://localhost:4000/2023/10/14/swiftui_image</id>
    <content type="html">&lt;p&gt;어제는 SwiftUI의 Image에 대해서 봅시다.
 공식 페이지는 다음과 같습니다
 &lt;a href=&quot;https://developer.apple.com/documentation/swiftui/image&quot;&gt;Image&lt;/a&gt;&lt;/p&gt;
@@ -56,6 +56,7 @@ Text(&quot;Water wheel&quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;modifier는 점점 추가하겠습니다&lt;/p&gt;
+
 </content>
  </entry>
  
