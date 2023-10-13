@@ -2,6 +2,7 @@
 published: true
 layout: post
 title: SwiftUI - Image
+date: 2023-10-14 08:00:00 +0900
 ---
 
 어제는 SwiftUI의 Image에 대해서 봅시다.
