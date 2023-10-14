@@ -5,7 +5,7 @@ title: SwiftUI - Image
 date: 2023-10-14 08:00:00 +0900
 ---
 
-어제는 SwiftUI의 Image에 대해서 봅시다.  
+오늘은 SwiftUI의 Image에 대해서 봅시다.  
 공식 페이지는 다음과 같습니다
 
 [Image](https://developer.apple.com/documentation/swiftui/image)

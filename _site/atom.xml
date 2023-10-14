@@ -4,7 +4,7 @@
  <title>Out of code</title>
  <link href="/atom.xml" rel="self"/>
  <link href="https://getpoole.com/"/>
- <updated>2023-10-14T09:04:43+09:00</updated>
+ <updated>2023-10-14T09:06:38+09:00</updated>
  <id>https://getpoole.com</id>
  <author>
    <name>Donghyuk</name>
@@ -17,7 +17,7 @@
    <link href="https://getpoole.com/2023/10/14/swiftui-image/"/>
    <updated>2023-10-14T08:00:00+09:00</updated>
    <id>https://getpoole.com/2023/10/14/swiftui-image</id>
-   <content type="html">&lt;p&gt;어제는 SwiftUI의 Image에 대해서 봅시다.&lt;br /&gt;
+   <content type="html">&lt;p&gt;오늘은 SwiftUI의 Image에 대해서 봅시다.&lt;br /&gt;
 공식 페이지는 다음과 같습니다&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://developer.apple.com/documentation/swiftui/image&quot;&gt;Image&lt;/a&gt;&lt;/p&gt;
