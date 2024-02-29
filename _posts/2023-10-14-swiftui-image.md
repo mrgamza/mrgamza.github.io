@@ -10,7 +10,7 @@ date: 2023-10-14 08:00:00 +0900
 
 [Image](https://developer.apple.com/documentation/swiftui/image)
 
-iOS 기준의 최소버전은 13.0입니다
+iOS 기준의 최소버전은 13.0입니다 
 
 공식적으로 PNG, JPEG, HEIC 등을 지원한다고 합니다. SVG등등...
 
